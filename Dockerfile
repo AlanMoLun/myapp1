@@ -5,4 +5,4 @@ FROM node:boron
 EXPOSE 5000
 
 # run the command
-CMD [ "npm", "start" ]
+CMD [ "npm", "start", "app.js" ]
