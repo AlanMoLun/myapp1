@@ -1,8 +1,19 @@
 # Instructions copied from - https://hub.docker.com/_/python/
-FROM node:boron
+FROM node:4.5
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package.json /usr/src/app/
+RUN npm install
+
+# Bundle app source
+COPY . /usr/src/app
 
 # tell the port number the container should expose
-EXPOSE 5000
+EXPOSE 3000
 
 # run the command
-CMD [ "npm", "start", "app.js" ]
+CMD [ "npm", "start" ]
