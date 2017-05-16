@@ -7,7 +7,7 @@ WORKDIR /var/www/html/XianLiaoM/chat_nodejs
 
 # Install app dependencies
 # COPY package.json /var/www/html/XianLiaoM/chat_nodejs
-RUN npm install
+# RUN npm install
 
 # Bundle app source
 COPY . /var/www/html/XianLiaoM/chat_nodejs
