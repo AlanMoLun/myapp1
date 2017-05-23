@@ -16,4 +16,6 @@ COPY . /var/www/html/XianLiaoM/chat_nodejs
 EXPOSE 3000
 
 # run the command
+# 123
+# 456
 CMD [ "npm", "start" ]
